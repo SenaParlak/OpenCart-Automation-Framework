@@ -14,6 +14,7 @@ public class LoginPage extends BasePage{
     @FindBy(css = "input[value='Login']")
     WebElement loginButton;
 
+
     public void loginInformation(String email, String password){
         type(emailField, email);
         type(passwordField, password);
