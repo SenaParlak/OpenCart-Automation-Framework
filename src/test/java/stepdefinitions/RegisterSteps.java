@@ -44,9 +44,9 @@ public class RegisterSteps {
     }
 
     @Then("account should be created successfully")
-    public void accountShouldBeCreatedSuccessfully() throws InterruptedException {
+    public void accountShouldBeCreatedSuccessfully() {
 
         Assert.assertEquals(accountPage.getSuccessMessage(), "Congratulations! Your new account has been successfully created!");
-        Thread.sleep(2000);
+
     }
 }

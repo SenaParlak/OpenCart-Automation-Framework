@@ -11,8 +11,15 @@ public class HeaderPage extends BasePage{
     @FindBy(linkText = "Register")
     private WebElement registerButton;
 
+    @FindBy(linkText = "Login")
+    private WebElement loginButton;
+
     public void goToRegisterPage(){
         click(myAccount);
         click(registerButton);
+    }
+    public void goToLoginPage(){
+        click(myAccount);
+        click(loginButton);
     }
 }
