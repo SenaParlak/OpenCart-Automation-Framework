@@ -17,6 +17,12 @@ public class HeaderPage extends BasePage{
     @FindBy(linkText = "Logout")
     private WebElement logoutButton;
 
+    @FindBy(css = "#search input")
+    private WebElement searchBox;
+
+    @FindBy(css = "button[class='btn btn-default btn-lg']")
+    private WebElement searchButton;
+
     public void goToRegisterPage(){
         click(myAccount);
         click(registerButton);
@@ -31,5 +37,10 @@ public class HeaderPage extends BasePage{
 
     public String loginButtonIsPresent(){
         return getText(loginButton);
+    }
+
+    public void searchProduct(String searchText){
+        type(searchBox, searchText);
+        click(searchButton);
     }
 }
