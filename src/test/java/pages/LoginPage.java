@@ -6,13 +6,16 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends BasePage{
 
     @FindBy(id = "input-email")
-    WebElement emailField;
+    private WebElement emailField;
 
     @FindBy(id = "input-password")
-    WebElement passwordField;
+    private WebElement passwordField;
 
     @FindBy(css = "input[value='Login']")
-    WebElement loginButton;
+   private WebElement loginButton;
+
+    @FindBy(css = "div[class='alert alert-danger alert-dismissible']")
+    private WebElement failLoginMessage;
 
 
     public void loginInformation(String email, String password){
@@ -21,5 +24,8 @@ public class LoginPage extends BasePage{
     }
     public void clickLoginButton(){
         click(loginButton);
+    }
+    public String getFailLoginMessage(){
+        return getText(failLoginMessage);
     }
 }

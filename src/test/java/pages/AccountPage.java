@@ -14,6 +14,7 @@ public class AccountPage extends BasePage{
     public String getSuccessMessage(){
        return getText(successMessage);
     }
+
     public String getMyAccountTitle(){
         return getText(myAccountTitle);
     }
