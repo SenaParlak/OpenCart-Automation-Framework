@@ -17,9 +17,9 @@ public class SearchResultPage extends BasePage{
         return getText(searchCriteriaTitle);
     }
     private WebElement addProductButton(String productName){
-        return DriverManager.getDriver().findElement
-                (By.xpath("//h4/a[normalize-space()='" + productName +
-                        "']/ancestor::div[contains(@class,'product-thumb')]//button[contains(@onclick,'cart.add')]"));
+        return DriverManager.getDriver().findElement(
+        By.xpath("//h4/a[normalize-space()='" + productName +
+                "']/ancestor::div[contains(@class,'product-thumb')]//button[contains(@onclick,'cart.add')]"));
     }
     public void addProductToCart(String productName){
         click(addProductButton(productName));
